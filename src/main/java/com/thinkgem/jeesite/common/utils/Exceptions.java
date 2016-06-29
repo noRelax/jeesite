@@ -8,6 +8,8 @@ import java.io.StringWriter;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.junit.Test;
+
 /**
  * 关于异常的工具类.
  * @author calvin
@@ -15,8 +17,8 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class Exceptions {
 
-	/**
-	 * 将CheckedException转换为UncheckedException.
+	/**运行时异常(RuntimeException)和受检查异常(Checked Exception)
+	 * 将CheckedException转换为UncheckedException(运行时异常，RuntimeException).
 	 */
 	public static RuntimeException unchecked(Exception e) {
 		if (e instanceof RuntimeException) {
@@ -67,6 +69,15 @@ public class Exceptions {
 			ex = (Throwable) request.getAttribute("javax.servlet.error.exception");
 		}
 		return ex;
+	}
+	
+	@Test
+	public void testGetStackTraceAsString(){
+		try {
+			int i=1/0;
+		} catch (Exception e) {
+			System.out.println(isCausedBy(e, e.getClass()));
+		}
 	}
 	
 }

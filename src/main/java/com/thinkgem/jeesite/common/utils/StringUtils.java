@@ -88,6 +88,11 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 		String s = m.replaceAll("");
 		return s;
 	}
+	public static void main(String[] args) {
+		String html="<input name=\"wusong\" value=\"wusong\">1111";
+		String newHtml = replaceHtml(html);
+		System.out.println(newHtml);
+	}
 	
 	/**
 	 * 替换为手机识别的HTML，去掉样式及属性，保留回车。

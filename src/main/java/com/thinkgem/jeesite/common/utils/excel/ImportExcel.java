@@ -349,22 +349,22 @@ public class ImportExcel {
 		return dataList;
 	}
 
-//	/**
-//	 * 导入测试
-//	 */
-//	public static void main(String[] args) throws Throwable {
-//		
-//		ImportExcel ei = new ImportExcel("target/export.xlsx", 1);
-//		
-//		for (int i = ei.getDataRowNum(); i < ei.getLastDataRowNum(); i++) {
-//			Row row = ei.getRow(i);
-//			for (int j = 0; j < ei.getLastCellNum(); j++) {
-//				Object val = ei.getCellValue(row, j);
-//				System.out.print(val+", ");
-//			}
-//			System.out.print("\n");
-//		}
-//		
-//	}
+	/**
+	 * 导入测试
+	 */
+	public static void main(String[] args) throws Throwable {
+		
+		ImportExcel ei = new ImportExcel("G:/海风教育工作/BI统计/统计上课情况/学习中心登陆注册数据汇总.xlsx", 1);
+		
+		for (int i = ei.getDataRowNum(); i < ei.getLastDataRowNum(); i++) {
+			Row row = ei.getRow(i);
+			for (int j = 0; j < ei.getLastCellNum(); j++) {
+				Object val = ei.getCellValue(row, j);
+				System.out.print(val+", ");
+			}
+			System.out.print("\n");
+		}
+		
+	}
 
 }

@@ -6,7 +6,6 @@
 	<groupId>com.thinkgem.jeesite</groupId>
 	<artifactId>jeesite</artifactId>
 	<version>1.2.6</version>
-	<packaging>war</packaging>
 	
 	<name>JeeSite</name>
 	<url>http://thinkgem.github.com/jeesite</url>
@@ -1031,4 +1030,5 @@
 		</developer>
 	</developers>
 	
+	<packaging>war</packaging>
 </project>

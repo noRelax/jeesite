@@ -189,6 +189,7 @@ public class ActUtils {
 	
 	public static void main(String[] args) {
 		 User user = new User();
+		 user.preInsert();
 		 System.out.println(getMobileEntity(user, "@"));
 	}
 }

@@ -22,11 +22,11 @@ import freemarker.template.Template;
 public class SendMailUtil {
 
 	// private static final String smtphost = "192.168.1.70";
-	private static final String from = "thinkgem@163.com";
-	private static final String fromName = "测试公司";
+	private static final String from = "woshiwusonghaha@163.com";
+	private static final String fromName = "norelax";
 	private static final String charSet = "utf-8";
-	private static final String username = "thinkgem@163.com";
-	private static final String password = "123456";
+	private static final String username = "woshiwusonghaha@163.com";
+	private static final String password = "xxxx";
 
 	private static Map<String, String> hostMap = new HashMap<String, String>();
 	static {
@@ -285,8 +285,8 @@ public class SendMailUtil {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("subject", "测试标题");
 		map.put("content", "测试 内容");
-		String templatePath = "mailtemplate/test.ftl";
-		sendFtlMail("test@163.com", "sendemail test!", templatePath, map);
+//		String templatePath = "mailtemplate/test.ftl";
+		sendCommonMail("1139964763@qq.com", "test","test");
 
 		// System.out.println(getFileName("mailtemplate/test.ftl"));
 	}

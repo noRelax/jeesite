@@ -6,7 +6,7 @@ rem  * Author: ThinkGem@163.com
 rem  */
 title %cd%
 echo.
-echo [ĞÅÏ¢] Ê¹ÓÃTomcat7²å¼şÔËĞĞ¹¤³Ì¡£
+echo [ä¿¡æ¯] ä½¿ç”¨Tomcat7æ’ä»¶è¿è¡Œå·¥ç¨‹ã€‚
 echo.
 rem pause
 rem echo.

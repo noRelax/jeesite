@@ -25,7 +25,6 @@ import com.thinkgem.jeesite.common.web.BaseController;
 import com.thinkgem.jeesite.common.utils.StringUtils;
 import com.thinkgem.jeesite.modules.sys.entity.User;
 import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
-import com.thinkgem.jeesite.modules.test.entity.RoomEventEntity;
 import com.thinkgem.jeesite.modules.test.entity.Test;
 import com.thinkgem.jeesite.modules.test.service.TestService;
 
@@ -130,54 +129,6 @@ public class TestController extends BaseController {
 //		return "redirect:" + adminPath + "/test/test/?repage";
 		return "true";
 	}
-	@RequestMapping(value="biTest")
-	public String biTest(Model model){
-		List<RoomEventEntity> roomEvents=new ArrayList<RoomEventEntity>();
-		for (int i = 0; i < 10; i++) {
-			RoomEventEntity roomEvent = new RoomEventEntity();
-			roomEvent.setCourseName("高三英语同步提分（线上）");
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			roomEvent.setLessonTimes("2015:"+i+"~2015:"+i);
-			roomEvent.setRoomId(i+"");
-			roomEvent.setStudentName("wusong"+i);
-			roomEvent.setStuEnterTimes(Double.parseDouble(i+""));
-			roomEvent.setStuExitTimes(Double.parseDouble(i+""));
-			roomEvent.setStuForceExitTimes(Double.parseDouble(i+""));
-			roomEvent.setStuReConnectExitTimes(Double.parseDouble(i+""));
-			
-			roomEvent.setTeacherName("wusong"+i);
-			roomEvent.setTeaEnterTimes(Double.parseDouble(i+""));
-			roomEvent.setTeaExitTimes(Double.parseDouble(i+""));
-			roomEvent.setTeaForceExitTimes(Double.parseDouble(i+""));
-			roomEvent.setTeaReConnectExitTimes(Double.parseDouble(i+""));
-			roomEvents.add(roomEvent);
-		}
-		model.addAttribute("roomEvents", roomEvents);
-		return "modules/test/bi";
-	}
-	
-	@RequestMapping(value="testAjax")
-	@ResponseBody
-	public Object testAjax(){
-		List<RoomEventEntity> roomEvents=new ArrayList<RoomEventEntity>();
-		for (int i = 0; i < 10; i++) {
-			RoomEventEntity roomEvent = new RoomEventEntity();
-			roomEvent.setCourseName("高三英语同步提分（线上）");
-			roomEvent.setLessonTimes("2015:"+i+"~2015:"+i);
-			roomEvent.setRoomId(i+"");
-			roomEvent.setStudentName("wusong"+i);
-			roomEvent.setStuEnterTimes(Double.parseDouble(i+""));
-			roomEvent.setStuExitTimes(Double.parseDouble(i+""));
-			roomEvent.setStuForceExitTimes(Double.parseDouble(i+""));
-			roomEvent.setStuReConnectExitTimes(Double.parseDouble(i+""));
-			roomEvent.setTeacherName("wusong"+i);
-			roomEvent.setTeaEnterTimes(Double.parseDouble(i+""));
-			roomEvent.setTeaExitTimes(Double.parseDouble(i+""));
-			roomEvent.setTeaForceExitTimes(Double.parseDouble(i+""));
-			roomEvent.setTeaReConnectExitTimes(Double.parseDouble(i+""));
-			roomEvents.add(roomEvent);
-		}
-		return roomEvents;
-	}
+
 
 }

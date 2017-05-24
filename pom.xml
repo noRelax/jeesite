@@ -644,7 +644,7 @@
 			<artifactId>UserAgentUtils</artifactId>
 			<version>1.13</version>
 		</dependency>
-		
+
 		<!-- 自定义jar依赖包
 		<dependency>
 			<groupId>com.thinkgem.jeesite</groupId>
@@ -949,11 +949,6 @@
 					<groupId>org.dbunit</groupId>
 					<artifactId>dbunit</artifactId>
 					<version>2.4.8</version>
-				</dependency>
-			  	<dependency>
-				    <groupId>org.apache.poi</groupId>
-				    <artifactId>poi</artifactId>
-				    <version>3.2-FINAL</version>
 				</dependency>
 			</dependencies>
 			<build>

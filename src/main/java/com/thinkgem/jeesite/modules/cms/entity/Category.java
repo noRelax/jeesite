@@ -297,7 +297,7 @@ public class Category extends TreeEntity<Category> {
 			if (e.getParent()!=null && e.getParent().getId()!=null
 					&& e.getParent().getId().equals(parentId)){
 				list.add(e);
-				// 判断是否还有子节点, 有则继续获取子节点
+				// 判断是否还有子节点, 有则继续获取子节点,递归调用
 				for (int j=0; j<sourcelist.size(); j++){
 					Category child = sourcelist.get(j);
 					if (child.getParent()!=null && child.getParent().getId()!=null

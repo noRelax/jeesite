@@ -558,6 +558,6 @@ public class Page<T> {
 //		this.pageSize = page.getSize();
 //		this.count = page.getTotalElements();
 //		this.list = page.getContent();
-//	}
+//	}master提交。。。。
 	
 }

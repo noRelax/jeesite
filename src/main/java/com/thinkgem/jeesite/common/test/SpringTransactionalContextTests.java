@@ -16,12 +16,12 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 @ContextConfiguration(locations = {"/spring-context.xml"})
 public class SpringTransactionalContextTests extends AbstractTransactionalJUnit4SpringContextTests {
 
-	protected DataSource dataSource;
+    protected DataSource dataSource;
 
-	@Autowired
-	public void setDataSource(DataSource dataSource) {
-		super.setDataSource(dataSource);
-		this.dataSource = dataSource;
-	}
-	
+    @Autowired
+    public void setDataSource(DataSource dataSource) {
+        super.setDataSource(dataSource);
+        this.dataSource = dataSource;
+    }
+
 }

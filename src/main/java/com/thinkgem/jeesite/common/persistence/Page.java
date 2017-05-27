@@ -278,14 +278,14 @@ public class Page<T> {
 		return toString();
 	}
 	
-//	public static void main(String[] args) {
-//		Page<String> p = new Page<String>(3, 3);
-//		System.out.println(p);
-//		System.out.println("首页："+p.getFirst());
-//		System.out.println("尾页："+p.getLast());
-//		System.out.println("上页："+p.getPrev());
-//		System.out.println("下页："+p.getNext());
-//	}
+	public static void main(String[] args) {
+		Page<String> p = new Page<String>(3, 3);
+		System.out.println(p);
+		System.out.println("首页："+p.getFirst());
+		System.out.println("尾页："+p.getLast());
+		System.out.println("上页："+p.getPrev());
+		System.out.println("下页："+p.getNext());
+	}
 
 	/**
 	 * 获取设置总数

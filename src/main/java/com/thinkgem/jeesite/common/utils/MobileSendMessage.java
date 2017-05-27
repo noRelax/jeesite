@@ -1,4 +1,5 @@
-/*package com.thinkgem.jeesite.common.utils;
+/*
+package com.thinkgem.jeesite.common.utils;
 
 import java.util.List;
 
@@ -20,11 +21,13 @@ public class MobileSendMessage {
 	public static final String apiKey = "oc0yx4ST3dNQcGbXNQUNE2yn";
 	public static final String secretKey = "KpRboB9HiE6wm7I9IHtcMLnNGZY0S27W";
 	
-	*//**
+	*/
+/**
 	 * 无限制推送广播
 	 * @param title
-	 * @param content
-	 *//*
+	 * @param content*//*
+
+
 	public static void pushBroadcastMessage(String title,String content) {
 		
 	        ChannelKeyPair pair = new ChannelKeyPair(MobileSendMessage.apiKey, MobileSendMessage.secretKey);
@@ -63,12 +66,14 @@ public class MobileSendMessage {
 	}
 	
 	
-	*//**
+	*/
+/**
 	 * 多人员手机提醒信息发送
 	 * @param title
 	 * @param content
-	 * @param users
-	 *//*
+	 * @param users*//*
+
+
 	public static void pushUnicastMessageMessage(String title,String content,List<String> userIds) {
 		
 		ChannelKeyPair pair = new ChannelKeyPair(MobileSendMessage.apiKey, MobileSendMessage.secretKey);

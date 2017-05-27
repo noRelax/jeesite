@@ -36,7 +36,7 @@ public class Site extends DataEntity<Site> {
 		this.id = id;
 	}
 
-	@Length(min=1, max=100)
+	@Length(min=1, max=2)
 	public String getName() {
 		return name;
 	}

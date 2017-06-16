@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.thinkgem.jeesite.modules.test.entity.Admin" >
+  <resultMap id="BaseResultMap" type="com.thinkgem.jeesite.modules.test.entity.Admin" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="salt" property="salt" jdbcType="VARCHAR" />
+    <result column="mlf_username" property="mlfUsername" jdbcType="VARCHAR" />
+    <result column="created_at" property="createdAt" jdbcType="TIMESTAMP" />
+    <result column="is_disabled" property="isDisabled" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <trim prefix="where" prefixOverrides="and|or" >
+      <if test="condition.name != null" >
+         and name = #{condition.name}
+      </if>
+      <if test="condition.username != null" >
+         and username = #{condition.username}
+      </if>
+      <if test="condition.password != null" >
+         and password = #{condition.password}
+      </if>
+      <if test="condition.salt != null" >
+         and salt = #{condition.salt}
+      </if>
+      <if test="condition.mlfUsername != null" >
+         and mlf_username = #{condition.mlfUsername}
+      </if>
+      <if test="condition.createdAt != null" >
+         and created_at = #{condition.createdAt}
+      </if>
+      <if test="condition.isDisabled != null" >
+         and is_disabled = #{condition.isDisabled}
+      </if>
+    </trim>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, name, username, password, salt, mlf_username, created_at, is_disabled
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.thinkgem.jeesite.modules.test.entity.Criteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from admin
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <include refid="common.Mysql_Pagination_Limit" />
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from admin
+    where id = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from admin
+    where id = #{id}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.thinkgem.jeesite.modules.test.entity.Criteria" >
+    delete from admin
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.thinkgem.jeesite.modules.test.entity.Admin" >
+    insert into admin (id, name, username, password, salt, mlf_username, created_at, 
+      is_disabled)
+    values (#{id}, #{name}, #{username}, #{password}, #{salt}, #{mlfUsername}, #{createdAt}, 
+      #{isDisabled})
+  </insert>
+  <insert id="insertSelective" parameterType="com.thinkgem.jeesite.modules.test.entity.Admin" >
+    insert into admin
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="salt != null" >
+        salt,
+      </if>
+      <if test="mlfUsername != null" >
+        mlf_username,
+      </if>
+      <if test="createdAt != null" >
+        created_at,
+      </if>
+      <if test="isDisabled != null" >
+        is_disabled,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id},
+      </if>
+      <if test="name != null" >
+        #{name},
+      </if>
+      <if test="username != null" >
+        #{username},
+      </if>
+      <if test="password != null" >
+        #{password},
+      </if>
+      <if test="salt != null" >
+        #{salt},
+      </if>
+      <if test="mlfUsername != null" >
+        #{mlfUsername},
+      </if>
+      <if test="createdAt != null" >
+        #{createdAt},
+      </if>
+      <if test="isDisabled != null" >
+        #{isDisabled},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.thinkgem.jeesite.modules.test.entity.Criteria" resultType="java.lang.Integer" >
+    select count(*) from admin
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update admin
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name},
+      </if>
+      <if test="record.username != null" >
+        username = #{record.username},
+      </if>
+      <if test="record.password != null" >
+        password = #{record.password},
+      </if>
+      <if test="record.salt != null" >
+        salt = #{record.salt},
+      </if>
+      <if test="record.mlfUsername != null" >
+        mlf_username = #{record.mlfUsername},
+      </if>
+      <if test="record.createdAt != null" >
+        created_at = #{record.createdAt},
+      </if>
+      <if test="record.isDisabled != null" >
+        is_disabled = #{record.isDisabled},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update admin
+    set id = #{record.id},
+      name = #{record.name},
+      username = #{record.username},
+      password = #{record.password},
+      salt = #{record.salt},
+      mlf_username = #{record.mlfUsername},
+      created_at = #{record.createdAt},
+      is_disabled = #{record.isDisabled}
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.thinkgem.jeesite.modules.test.entity.Admin" >
+    update admin
+    <set >
+      <if test="name != null" >
+        name = #{name},
+      </if>
+      <if test="username != null" >
+        username = #{username},
+      </if>
+      <if test="password != null" >
+        password = #{password},
+      </if>
+      <if test="salt != null" >
+        salt = #{salt},
+      </if>
+      <if test="mlfUsername != null" >
+        mlf_username = #{mlfUsername},
+      </if>
+      <if test="createdAt != null" >
+        created_at = #{createdAt},
+      </if>
+      <if test="isDisabled != null" >
+        is_disabled = #{isDisabled},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.thinkgem.jeesite.modules.test.entity.Admin" >
+    update admin
+    set name = #{name},
+      username = #{username},
+      password = #{password},
+      salt = #{salt},
+      mlf_username = #{mlfUsername},
+      created_at = #{createdAt},
+      is_disabled = #{isDisabled}
+    where id = #{id}
+  </update>
+</mapper>

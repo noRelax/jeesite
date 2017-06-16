@@ -130,5 +130,12 @@ public class TestController extends BaseController {
 		return "true";
 	}
 
+	@RequestMapping("updateAdmin")
+    @ResponseBody
+    public String updateAdmin(){
+        testService.updateAdmin();
+        return "true";
+    }
+
 
 }

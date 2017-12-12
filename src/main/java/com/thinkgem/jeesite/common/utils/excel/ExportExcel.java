@@ -465,9 +465,7 @@ public class ExportExcel {
 		}
 		
 		ee.writeFile("/Users/wusong/Downloads/wusong.xlsx");
-
 		ee.dispose();
-		
 		log.debug("Export success.");
 		
 	}
